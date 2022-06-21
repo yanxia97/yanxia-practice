@@ -3,49 +3,49 @@
         "id": 10001,
         "event": "训练能力培训",
         "playerEffects": {
-            "PRC": 1
-        },
-        "MNY": -10
+            "PRC": 1,
+            "MNY": -10
+        }
     },
     "10002": {
         "id": 10002,
         "event": "运动医学课程",
         "playerEffects": {
-            "HEL": 1
-        },
-        "MNY": -10
+            "HEL": 1,
+            "MNY": -10
+        }
     },
     "10003": {
         "id": 10003,
         "event": "心理课程",
         "playerEffects": {
-            "ENC": 1
-        },
-        "MNY": -10
+            "ENC": 1,
+            "MNY": -10
+        }
     },
     "10004": {
         "id": 10004,
         "event": "经济管理课程",
         "playerEffects": {
-            "MAR": 1
-        },
-        "MNY": -10
+            "MAR": 1,
+            "MNY": -10
+        }
     },
     "10005": {
         "id": 10005,
         "event": "人际关系课程",
         "playerEffects": {
-            "REL": 1
-        },
-        "MNY": -10
+            "REL": 1,
+            "MNY": -10
+        }
     },
     "10006": {
         "id": 10006,
         "event": "彩票中了小奖",
         "playerEffects": {
-            "LUK": 1
+            "LUK": 1,
+            "MNY": 1
         },
-        "MNY": 1,
         "isRandom": 1,
         "probability": 0.5
     },
@@ -53,9 +53,9 @@
         "id": 10007,
         "event": "彩票中了大奖",
         "playerEffects": {
-            "LUK": 1
+            "LUK": 1,
+            "MNY": 5
         },
-        "MNY": 5,
         "isRandom": 1,
         "probability": 0.01
     },

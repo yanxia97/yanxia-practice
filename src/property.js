@@ -14,6 +14,7 @@ class Property {
         MNY: "MNY",
         TLT: "TLT",
         EVT: "EVT",
+        FAIL: "FAIL",
     };
 
     // #timeData;
@@ -37,6 +38,7 @@ class Property {
             [this.TYPES.REL]: 0,
             [this.TYPES.LUK]: 0,
             [this.TYPES.MNY]: 0,
+            [this.TYPES.FAIL]: 0,
             [this.TYPES.TLT]: [],
         };
         for(const key in data)
@@ -65,12 +67,12 @@ class Property {
             }
             if(!v.includes(value)) v.push(value);
         } else {
-            if (Number(value) !== NaN) {
+            if (Number(value)) {
                 this.#data[prop] += Number(value);
             } else {
                 for(const v of value.split(',')) {
-                    if (Number(value) !== NaN) {
-                        this.#data[prop] += Number(value);
+                    if (Number(v)) {
+                        this.#data[prop] += Number(v);
                     } else {
                         const [type, scale = 1] = v.split('*');
                         this.#data[prop] += this.get(this.TYPES[type]) * scale;
@@ -88,8 +90,13 @@ class Property {
     }
 
     isEnd() {
-        // 先默认4年
-        return this.get(this.TYPES.TIME) > 4 * 52 - 2;
+        // todo: 默认4年，时间可变
+        if (this.get(this.TYPES.MNY) < 0) {
+            this.#data.FAIL += 1
+        } else {
+            this.#data.FAIL = 0
+        }
+        return this.get(this.TYPES.TIME) > 4 * 52 - 2 || this.get(this.TYPES.FAIL) > 9;
     }
 
     timeNext() {

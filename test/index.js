@@ -15,12 +15,12 @@ async function debug() {
         MAR: 5,                     // 商业 Marketability MAR
         REL: 5,                     // 关系 relationship REL
         LUK: 5,                     // 运气 luck LUK
-        MNY: 10000,                 // 资金 money MNY
+        MNY: 10,                 // 资金 money MNY
     });
     let trajectory;
     do{
         try{
-            trajectory = life.next([10001,10002,10008]);
+            trajectory = life.next([10004,10008,10008]);
         } catch(e) {
             console.error(e);
             // debugger
