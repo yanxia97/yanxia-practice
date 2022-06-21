@@ -15,31 +15,32 @@ async function debug() {
         MAR: 5,                     // 商业 Marketability MAR
         REL: 5,                     // 关系 relationship REL
         LUK: 5,                     // 运气 luck LUK
+        MNY: 10000,                 // 资金 money MNY
     });
     let trajectory;
     do{
         try{
-            trajectory = life.next();
+            trajectory = life.next([10001,10002,10008]);
         } catch(e) {
             console.error(e);
             // debugger
             throw e;
         }
-        const { age, content } = trajectory;
+        const { time, content } = trajectory;
         console.debug(`---------------------------------`);
-        console.debug(`-- ${age} 岁`);
-        console.debug('   ',
-            content.map(
-                ({type, description, rate, name, postEvent}) => {
-                    switch(type) {
-                        case 'TLT':
-                            return `天赋【${name}】发动：${description}`;
-                        case 'EVT':
-                            return description + (postEvent?`\n    ${postEvent}`:'');
-                    }
-                }
-            ).join('\n    ')
-        );
+        console.debug(`-- ${time} 周`);
+        // console.debug('   ',
+        //     content.map(
+        //         ({type, description, name}) => {
+        //             switch(type) {
+        //                 case 'TLT':
+        //                     return `天赋【${name}】发动：${description}`;
+        //                 case 'EVT':
+        //                     return description;
+        //             }
+        //         }
+        //     ).join('\n    ')
+        // );
     } while(!trajectory.isEnd)
     // debugger;
 }
