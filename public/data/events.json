@@ -253,6 +253,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -1
+    },
+    "effects": {
+      "STR": 1
     }
   },
   "10025": {
@@ -261,6 +264,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -1
+    },
+    "effects": {
+      "REC": 1
     }
   },
   "10026": {
@@ -269,6 +275,10 @@
     "category": "default",
     "playerEffects": {
       "MNY": -1
+    },
+    "effects": {
+      "POW": 0.5,
+      "SPD": 0.5
     }
   },
   "10027": {
@@ -277,6 +287,10 @@
     "category": "default",
     "playerEffects": {
       "MNY": -1
+    },
+    "effects": {
+      "STA": 0.8,
+      "SPR": 0.2
     }
   },
   "10028": {
@@ -285,6 +299,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -1
+    },
+    "effects": {
+      "SKL": 1
     }
   },
   "10029": {
@@ -293,6 +310,11 @@
     "category": "default",
     "playerEffects": {
       "MNY": -1
+    },
+    "effects": {
+      "STR": 0.1,
+      "SKL": 0.8,
+      "INT": 0.1
     }
   },
   "10030": {
@@ -301,6 +323,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -1
+    },
+    "effects": {
+      "FAT": -1
     }
   },
   "10031": {
@@ -309,6 +334,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -1
+    },
+    "effects": {
+      "INT": 1
     }
   },
   "10032": {
@@ -317,6 +345,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -2
+    },
+    "effects": {
+      "STR": 1.5
     }
   },
   "10033": {
@@ -325,6 +356,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -2
+    },
+    "effects": {
+      "REC": 1.5
     }
   },
   "10034": {
@@ -333,6 +367,10 @@
     "category": "default",
     "playerEffects": {
       "MNY": -2
+    },
+    "effects": {
+      "POW": 0.75,
+      "SPD": 0.75
     }
   },
   "10035": {
@@ -341,6 +379,10 @@
     "category": "default",
     "playerEffects": {
       "MNY": -2
+    },
+    "effects": {
+      "STA": 1.2,
+      "SPR": 0.3
     }
   },
   "10036": {
@@ -349,6 +391,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -2
+    },
+    "effects": {
+      "SKL": 1.5
     }
   },
   "10037": {
@@ -357,6 +402,11 @@
     "category": "default",
     "playerEffects": {
       "MNY": -2
+    },
+    "effects": {
+      "STR": 0.15,
+      "SKL": 1.2,
+      "INT": 0.15
     }
   },
   "10038": {
@@ -365,6 +415,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -2
+    },
+    "effects": {
+      "FAT": -1.5
     }
   },
   "10039": {
@@ -373,6 +426,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -2
+    },
+    "effects": {
+      "INT": 1.5
     }
   },
   "10040": {
@@ -381,6 +437,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -3
+    },
+    "effects": {
+      "STR": 2
     }
   },
   "10041": {
@@ -389,6 +448,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -3
+    },
+    "effects": {
+      "REC": 2
     }
   },
   "10042": {
@@ -397,6 +459,10 @@
     "category": "default",
     "playerEffects": {
       "MNY": -3
+    },
+    "effects": {
+      "POW": 1,
+      "SPD": 1
     }
   },
   "10043": {
@@ -405,6 +471,10 @@
     "category": "default",
     "playerEffects": {
       "MNY": -3
+    },
+    "effects": {
+      "STA": 1.6,
+      "SPR": 0.4
     }
   },
   "10044": {
@@ -413,6 +483,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -3
+    },
+    "effects": {
+      "SKL": 2
     }
   },
   "10045": {
@@ -421,6 +494,11 @@
     "category": "default",
     "playerEffects": {
       "MNY": -3
+    },
+    "effects": {
+      "STR": 0.2,
+      "SKL": 1.6,
+      "INT": 0.2
     }
   },
   "10046": {
@@ -429,6 +507,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -3
+    },
+    "effects": {
+      "FAT": -2
     }
   },
   "10047": {
@@ -437,6 +518,9 @@
     "category": "default",
     "playerEffects": {
       "MNY": -3
+    },
+    "effects": {
+      "INT": 2
     }
   },
   "10048": {

@@ -1,5 +1,5 @@
-import { clone } from "./functions/util.js";
-import { checkCondition } from "./functions/condition.js";
+import { clone } from './functions/util.js';
+import { checkCondition } from './functions/condition.js';
 
 class Event {
   constructor() {}
@@ -15,8 +15,9 @@ class Event {
         randomEvents.push(events[event]);
       }
     }
+    // 随机事件由概率从小到大排序
     this.#randomEvents = randomEvents.sort(
-      (a, b) => a.probability - b.probability
+      (a, b) => a.probability - b.probability,
     );
   }
 

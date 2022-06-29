@@ -1,4 +1,4 @@
-import { clone } from "./functions/util.js";
+import { clone } from './functions/util.js';
 
 class Athlete {
   constructor() {}
@@ -7,22 +7,22 @@ class Athlete {
 
   TYPES = {
     GDR: 'GDR', // gender 性别
-    AGE: "AGE", // age 年龄
-    PKA: "PKA", // peakAge 巅峰年龄
-    PKT: "PKT", // peakTime 巅峰时间
-    IMP: "IMP", // improvability 成长性
-    POT: "POT", // potential 天赋
-    STR: "STR", // strength 力量
-    REC: "REC", // reaction 反应
-    POW: "POW", // power 爆发力
-    STA: "STA", // stamina 耐力
-    SKL: "SKL", // skill 技巧
-    SPD: "SPD", // speed 速度
-    SPR: "SPR", // spirit 精神
-    INT: "INT", // intelligence 智慧
-    FAT: "FAT", // fatigue 疲劳
-    FAM: "FAM", // FAME 名声
-    TLT: "TLT",
+    AGE: 'AGE', // age 年龄
+    PKA: 'PKA', // peakAge 巅峰年龄
+    PKT: 'PKT', // peakTime 巅峰时间
+    IMP: 'IMP', // improvability 成长性
+    POT: 'POT', // potential 天赋
+    STR: 'STR', // strength 力量
+    REC: 'REC', // reaction 反应
+    POW: 'POW', // power 爆发力
+    STA: 'STA', // stamina 耐力
+    SKL: 'SKL', // skill 技巧
+    SPD: 'SPD', // speed 速度
+    SPR: 'SPR', // spirit 精神
+    INT: 'INT', // intelligence 智慧
+    FAT: 'FAT', // fatigue 疲劳
+    FAM: 'FAM', // FAME 名声
+    TLT: 'TLT',
   };
 
   initial(rarity) {
@@ -73,11 +73,11 @@ class Athlete {
       if (Number(value)) {
         this.#data[prop] += Number(value);
       } else {
-        for (const v of value.split(",")) {
+        for (const v of value.split(',')) {
           if (Number(v)) {
             this.#data[prop] += Number(v);
           } else {
-            const [type, scale = 1] = v.split("*");
+            const [type, scale = 1] = v.split('*');
             this.#data[prop] += this.get(this.TYPES[type]) * scale;
           }
         }

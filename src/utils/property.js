@@ -1,20 +1,20 @@
-import { clone } from "./functions/util.js";
+import { clone } from './functions/util.js';
 
 class Property {
   constructor() {}
 
   TYPES = {
-    TIME: "TIME",
-    PRC: "PRC",
-    HEL: "HEL",
-    ENC: "ENC",
-    MAR: "MAR",
-    REL: "REL",
-    LUK: "LUK",
-    MNY: "MNY",
-    TLT: "TLT",
-    EVT: "EVT",
-    FAIL: "FAIL",
+    TIME: 'TIME',
+    PRC: 'PRC',
+    HEL: 'HEL',
+    ENC: 'ENC',
+    MAR: 'MAR',
+    REL: 'REL',
+    LUK: 'LUK',
+    MNY: 'MNY',
+    TLT: 'TLT',
+    EVT: 'EVT',
+    FAIL: 'FAIL',
   };
 
   // #timeData;
@@ -68,11 +68,11 @@ class Property {
       if (Number(value)) {
         this.#data[prop] += Number(value);
       } else {
-        for (const v of value.split(",")) {
+        for (const v of value.split(',')) {
           if (Number(v)) {
             this.#data[prop] += Number(v);
           } else {
-            const [type, scale = 1] = v.split("*");
+            const [type, scale = 1] = v.split('*');
             this.#data[prop] += this.get(this.TYPES[type]) * scale;
           }
         }

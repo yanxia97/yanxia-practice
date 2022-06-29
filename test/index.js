@@ -1,5 +1,5 @@
-import { readFile } from "fs/promises";
-import Life from "../src/life.js";
+import { readFile } from 'fs/promises';
+import Life from '../src/utils/life.js';
 
 global.json = (filePath) => readFile(filePath);
 
@@ -25,10 +25,10 @@ async function debug() {
       // debugger
       throw e;
     }
-    const { time, content } = trajectory;
-    console.debug(`---------------------------------`);
-    console.debug(`-- ${time} 周`);
-    // console.debug('   ',
+    const { time } = trajectory;
+    console.warn('---------------------------------');
+    console.warn(`-- ${time} 周`);
+    // console.warn('   ',
     //     content.map(
     //         ({type, description, name}) => {
     //             switch(type) {

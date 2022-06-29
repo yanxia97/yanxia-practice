@@ -1,6 +1,6 @@
-import Property from "./property.js";
-import Event from "./event.js";
-import athlete from "./athlete.js";
+import Property from './property.js';
+import Event from './event.js';
+// import athlete from './athlete.js';
 // import Talent from './talent.js';
 
 class Life {
@@ -18,7 +18,7 @@ class Life {
 
   async initial() {
     // const talents = JSON.parse(await json('data/talents.json'));
-    const events = JSON.parse(await json("data/events.json"));
+    const events = JSON.parse(await json('public/data/events.json'));
 
     // this.#talent.initial({talents});
     this.#event.initial({ events });
@@ -35,7 +35,7 @@ class Life {
   next(choices) {
     const events = choices.map((choice) => this.#event.get(choice));
     const eventContent = this.doEvent(
-      this.#event.random(events, this.#property)
+      this.#event.random(events, this.#property),
     );
     // const talentContent = this.doTalent(talent);
 
@@ -73,7 +73,8 @@ class Life {
   doEvent(events) {
     const contents = [];
     for (let event in events) {
-      const { playerEffects, effects, description } = this.#event.do(events[event].id);
+      // const { playerEffects, effects, description } = this.#event.do(events[event].id);
+      const { playerEffects, description } = this.#event.do(events[event].id);
       this.#property.effect(playerEffects);
       const content = {
         type: this.#property.TYPES.EVT,

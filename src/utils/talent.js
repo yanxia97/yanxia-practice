@@ -1,4 +1,5 @@
-import { clone } from "./functions/util.js";
+import { clone } from './functions/util.js';
+import { checkCondition } from './functions/condition';
 class Talent {
   constructor() {}
 
