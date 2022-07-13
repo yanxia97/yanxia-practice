@@ -48,8 +48,8 @@ class Event {
   }
 
   do(eventId) {
-    const { playerEffects, effects, event: description } = this.get(eventId);
-    return { playerEffects, effects, description };
+    const { isSearch, rarity, playerEffects, effects, event: description } = this.get(eventId);
+    return { isSearch, rarity, playerEffects, effects, description };
   }
 
   random(events, property) {

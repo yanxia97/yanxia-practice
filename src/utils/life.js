@@ -1,12 +1,13 @@
 import Property from './property.js';
 import Event from './event.js';
-// import athlete from './athlete.js';
+import Athletes from './athletes.js';
 // import Talent from './talent.js';
 
 class Life {
   constructor() {
     this.#property = new Property();
     this.#event = new Event();
+    this.#athletes = new Athletes();
     // this.#talent = new Talent();
   }
 
@@ -22,8 +23,6 @@ class Life {
 
     // this.#talent.initial({talents});
     this.#event.initial({ events });
-
-    this.#athletes = [];
   }
 
   restart(allocation) {
@@ -73,9 +72,12 @@ class Life {
   doEvent(events) {
     const contents = [];
     for (let event in events) {
-      // const { playerEffects, effects, description } = this.#event.do(events[event].id);
-      const { playerEffects, description } = this.#event.do(events[event].id);
+      const { isSearch, rarity, playerEffects, effects, description } = this.#event.do(events[event].id);
       this.#property.effect(playerEffects);
+      this.#athletes.effect(effects, this.#property.get('PRC'));
+      if (isSearch) {
+        this.#athletes.draw(rarity);
+      }
       const content = {
         type: this.#property.TYPES.EVT,
         description,

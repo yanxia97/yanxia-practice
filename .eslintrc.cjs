@@ -36,5 +36,8 @@ module.exports = {
     'vue/no-unused-vars': 'warn',
     'vue/no-unused-components': 'warn',
     'vue/no-side-effects-in-computed-properties': 'warn',
+    "vue/multi-word-component-names": ["error", {
+      "ignores": ['index'],
+    }],
   },
 };
